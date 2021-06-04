@@ -93,5 +93,5 @@ The picture below shows the default values for the RPAInfo business object in th
 
 Finally, here the link to the toolkit, hope you find it useful! All comments and improvement suggestions are most welcome 👍🏻
 
-[IBM RPA Toolkit for BAW](./Downloads/IBM_RPA - 1.0.twx)
+[IBM RPA Toolkit for BAW](./Downloads/IBM_RPA.twx)
 - jeba
