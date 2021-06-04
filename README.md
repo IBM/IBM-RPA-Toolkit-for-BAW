@@ -46,9 +46,11 @@ Now, finally to the Toolkit itself 😄 Toolkit components are quite well docume
 
 `TestResponse` is used for testing in the Test Synchronous Integration CSHS to handle the response back from the bot.
 
+
 **Processes**
 
 `IBM RPA Activity NOT-TESTED` is the process to be used when calling out bots in asynchronous manner. As it was already discussed, the current Toolkit and the IBM RPA does not support this yet, but the Toolkit implementation is already in place.
+
 
 **Client-Side Human Services (CSHS)**
 
@@ -56,4 +58,22 @@ Now, finally to the Toolkit itself 😄 Toolkit components are quite well docume
 
 `Test Synchronous Integration` is a ready-made service for testing the synchronous call using the Run IBM RPA Bot service flow.
 
-**x**
+
+**Deployment Service Flows**
+
+Default implementation, not changed.
+
+
+**External Services**
+
+`Rest` was automatically generated when defining to use _doRest_ method from the kolbanTK.jar.
+
+
+**Server Files**
+
+`kolbanTK.jar` from the legendary BPM Toolkit by Mr. Neil Kolban. If it works, do not break it 😃 We use the REST call logic from the jar.
+
+
+**Service Flows**
+
+`Run IBM RPA Bot` is the service flow that you need to use in order to run IBM RPA bot using the synchronous RPA Web API. Look _Test Synchronous Integration_ CSHS for an example.
