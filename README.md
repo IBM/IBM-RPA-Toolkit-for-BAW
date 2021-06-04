@@ -16,3 +16,20 @@ The Web API is exposed by every IBM RPA agent service that you install and conne
 - Version number of the bot you want to trigger (optional)
 - Input parameters for the bot (optional)
 - Information if the RPA Agent computer needs to be unlocked to run the bot (true / false)
+
+## The Toolkit
+The first version of the Toolkit supports running IBM RPA bots synchronously using the Web API. We also plan to support asynchronous calls, but since that part needs some new readiness / custom components on the IBM RPA side, we have not yet implemented that.
+
+When using synchronous calls, there are obviously some things to consider:
+
+- If the bot runs for a long time, we might have a timeout for the call
+- If there is no available RPA runtime for bot execution the call fails
+- Best suited to run simple bots (queries / updates) with dedicated number of runtimes
+
+Now, finally to the Toolkit itself 😄 Toolkit components are quite well documented already inside the Toolkit using the documentation fields, but let's walk through the components inside the toolkit.
+
+### Toolkit components
+
+![](./images/tk_components.png)
+
+xx
