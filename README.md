@@ -32,9 +32,10 @@ Now, finally to the Toolkit itself 😄 Toolkit components are quite well docume
 
 ![](./images/tk_components.png)
 
-**Business Object**
+**Business Objects**
 
 `RPAInfo` is the BO that you need to use when calling out for your bot. It has the following parameters:
+
 ![](./images/rpainfo.png)
 - _web_api_url_ (String): the URL pointing to your RPA Agent’s Web API.
 - _http_method_ (String): method you want to use, GET or POST are supported, but if you’re passing input parameters, you should always use POST.
@@ -43,4 +44,16 @@ Now, finally to the Toolkit itself 😄 Toolkit components are quite well docume
 - _bot_version_ (String): version number of the bot you want to run.
 - _bot_input_ (String): input parameters that you want to provide when calling the bot – needs to be in JSON String format (look Test Synchronous Integration CSHS for an example).
 
-xxx
+`TestResponse` is used for testing in the Test Synchronous Integration CSHS to handle the response back from the bot.
+
+**Processes**
+
+`IBM RPA Activity NOT-TESTED` is the process to be used when calling out bots in asynchronous manner. As it was already discussed, the current Toolkit and the IBM RPA does not support this yet, but the Toolkit implementation is already in place.
+
+**Client-Side Human Services (CSHS)**
+
+`RPA Task` is used by the IBM RPA Activity NOT-TESTED, so it is not in use in this version yet.
+
+`Test Synchronous Integration` is a ready-made service for testing the synchronous call using the Run IBM RPA Bot service flow.
+
+**x**
