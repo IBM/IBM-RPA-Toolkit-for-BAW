@@ -87,6 +87,10 @@ When you know, and you should, what your RPA bot will return (if anything), you 
 
 The picture below shows the default values for the RPAInfo business object in the test service. You can use that as an example when you’re testing your own bot integration. `Notice that the bot_input parameter needs to be in the JSON String format, and the attributes included – like “text” in the example – need to match the variable names of the bot you’re running.`
 
+### One more thing
+
+When testing the Toolkit, BAW is calling IBM RPA via `https`. This obviously means that you need to import the signer certificate from _**https:<your_rpa_agent_address>:8099**_ to your BAW keystore. If you do not know how to do that, these instructions might help: https://www.ibm.com/docs/en/was-nd/8.5.5?topic=communications-adding-signer-certificate-keystore
+
 ![](./images/attributes.png)
 
 ## Downloads
@@ -99,7 +103,7 @@ Also, here's the link to the bot WAL scipt file, that works together with the `T
 
 ![](./images/wal.png)
 
-[Test Bot Script](https://github.com/juseljuk/IBM-RPA-Toolkit-for-BAW/blob/master/downloads/IBM_RPA.twx)
+[Test Bot Script](https://github.com/juseljuk/IBM-RPA-Toolkit-for-BAW/blob/master/downloads/HelloWorld.wal)
 
 ##
 

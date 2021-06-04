@@ -1,0 +1,7 @@
+
+	(ŒäF§ÂG≤ËHˆJ\ådefVar --name text --type String --parameter  --output 
+defVar --name id --type String --value 1234 --output 
+defVar --name success --type Boolean --value True --output 
+defVar --name value --type Numeric --value 512 --output 
+messageBox --title "Hello World" --text "${text}" --icon "Information" --buttons "OK" --defaultbutton "FirstButton"
+setVar --name "${text}" --value "All good here!""	˘f@¢∂FÌAà≤á>€ê‹*	20.12.0.0
