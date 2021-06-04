@@ -32,4 +32,5 @@ Now, finally to the Toolkit itself 😄 Toolkit components are quite well docume
 
 ![](./images/tk_components.png)
 
-xx
+**Business Object**
+`RPAInfo` is the BO that you need to use when calling out for your bot. It has the following parameters:
