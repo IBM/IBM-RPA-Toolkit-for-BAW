@@ -71,3 +71,12 @@ Default implementation, not changed.
 >**Service Flows**
 
 `Run IBM RPA Bot` is the service flow that you need to use in order to run IBM RPA bot using the synchronous RPA Web API. Look _Test Synchronous Integration_ CSHS for an example.
+
+## Testing the toolkit
+
+Let’s a have a closer look of the Test Synchronous Integration CSHS to see an example how to use the toolkit.
+
+![](./images/tk_testing.png)
+![](./images/tk_testing2.png)
+
+jeba
