@@ -105,4 +105,4 @@ Also, here's the link to the bot WAL scipt file, that works together with the `T
 
 All comments and improvement suggestions are most welcome 👍🏻
 
-> Author Jukka Juselius, jukka.juselius@fi.ibm.comments
+> Author Jukka Juselius, jukka.juselius@fi.ibm.com
