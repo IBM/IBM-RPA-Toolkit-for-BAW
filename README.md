@@ -33,4 +33,14 @@ Now, finally to the Toolkit itself 😄 Toolkit components are quite well docume
 ![](./images/tk_components.png)
 
 **Business Object**
+
 `RPAInfo` is the BO that you need to use when calling out for your bot. It has the following parameters:
+![](./images/rpainfo.png)
+- _web_api_url_ (String): the URL pointing to your RPA Agent’s Web API.
+- _http_method_ (String): method you want to use, GET or POST are supported, but if you’re passing input parameters, you should always use POST.
+- _unlock_machine_ (String): accepts true or false and determines if your agent environment (Windows) needs to be unlocked in order to run the bot.
+- _bot_to_trigger_ (String): name of the bot – as it is in your RPA tenant repository – you want to run.
+- _bot_version_ (String): version number of the bot you want to run.
+- _bot_input_ (String): input parameters that you want to provide when calling the bot – needs to be in JSON String format (look Test Synchronous Integration CSHS for an example).
+
+xxx
