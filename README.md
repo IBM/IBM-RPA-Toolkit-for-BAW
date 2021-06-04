@@ -79,4 +79,10 @@ Let’s a have a closer look of the Test Synchronous Integration CSHS to see an 
 ![](./images/tk_testing.png)
 ![](./images/tk_testing2.png)
 
-jeba
+The service has two simple coaches _Set RPA Info_ to set/edit the RPAInfo business object and _See the response_ to observe the result back from the RPA bot. The system service between the coaches calls the _Run IBM RPA Bot_ service flow and as you can see, takes RPAInfo as input and returns ANY type.
+
+When you know, and you should, what your RPA bot will return (if anything), you can easily **cast** the ANY type response to your own business object using **JSON.parse()** that BAW nowadays supports by default. Obviously, the variable names and types in the business object you’re casting to need to match the ones that your RPA bot returns, but this is very easy way to make use of the data that your bot returns.
+
+![](./images/casting.png)
+
+xxx
