@@ -91,12 +91,18 @@ The picture below shows the default values for the RPAInfo business object in th
 
 ## Downloads
 
-Finally, here the link to the toolkit, hope you find it useful! All comments and improvement suggestions are most welcome 👍🏻
+Finally, here the link to the toolkit, hope you find it useful!
 
 [IBM RPA Toolkit for BAW](https://github.com/juseljuk/IBM-RPA-Toolkit-for-BAW/blob/master/downloads/IBM_RPA.twx)
 
-Also, here's the link to the bot WAL scipt file, that works together with the `Test Synchronous Integration` CSHS testing service. Just make sure to publish the bot to your RPA tenant using the name _**HelloWorld**_ and `Set as Production` flag enabled.
+Also, here's the link to the bot WAL scipt file, that works together with the `Test Synchronous Integration` CSHS testing service. Just make sure to publish the bot to your RPA tenant using the name _**HelloWorld**_ and `Set as production` flag enabled.
 
 ![](./images/wal.png)
 
 [Test Bot Script](https://github.com/juseljuk/IBM-RPA-Toolkit-for-BAW/blob/master/downloads/IBM_RPA.twx)
+
+##
+
+All comments and improvement suggestions are most welcome 👍🏻
+
+> Author Jukka Juselius, jukka.juselius@fi.ibm.comments
