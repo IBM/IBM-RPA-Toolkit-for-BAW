@@ -9,7 +9,7 @@ There are several ways to start an IBM RPA bot. Using scheduling, orchestrations
 
 ![](./images/start_bot_new.png)
 
-The Web API is exposed by every IBM RPA agent service that you install and connect to your IBM RPA tenant. The operation of the API is described HERE. Currently the Web API has a fixed port and supports only synchronous (blocking) calls, but it is really easy to use and requires minimal information from your RPA environment:
+The Web API is exposed by every IBM RPA agent service that you install and connect to your IBM RPA tenant. The operation of the API is described [HERE](https://www.ibm.com/docs/en/rpa/21.0?topic=bot-starting-bots-by-api-call). Currently the Web API has a fixed port and supports only synchronous (blocking) calls, but it is really easy to use and requires minimal information from your RPA environment:
 
 - URL to your RPA Agent (https://<your_computer_address>:8099)
 - Name of the bot you want to trigger
@@ -20,7 +20,7 @@ The Web API is exposed by every IBM RPA agent service that you install and conne
 **_NEW_** in IBM RPA version 21.0.2 is the IBM RPA Server API that we can use to trigger a IBM RPA Process to run a bot assigned to it. _Using this API is now supported in toolkit version 2!_
 
 ## The Toolkit
-The first version of the Toolkit supported only running IBM RPA bots synchronously using the Web API exposed by any RPA runtime environment (agent service). The second version now supports running bots via the IBM RPA Server API that can be used to trigger orchestrations (IBM RPA Processes). The offcial documentation of the Server API can be found [here](https://www.ibm.com/docs/en/rpa/21.0?topic=api-starting-bot-in-orchestrator-process-via).
+The first version of the Toolkit supported only running IBM RPA bots synchronously using the Web API exposed by any RPA runtime environment (agent service). The second version now supports running bots via the IBM RPA Server API that can be used to trigger orchestrations (IBM RPA Processes). The offcial documentation of the Server API can be found [HERE](https://www.ibm.com/docs/en/rpa/21.0?topic=api-starting-bot-in-orchestrator-process-via).
 
 When using synchronous calls, there are obviously some things to consider:
 
