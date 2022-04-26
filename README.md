@@ -7,7 +7,7 @@ To understand a bit better how the interaction between BAW and IBM RPA actually 
 
 There are several ways to start an IBM RPA bot. Using scheduling, orchestrations (and the underlying queuing infrastructure), Web API and exposing bots as chat bots.
 
-![](./images/start_bot.png)
+![](./images/start_bot_new.png)
 
 The Web API is exposed by every IBM RPA agent service that you install and connect to your IBM RPA tenant. The operation of the API is described HERE. Currently the Web API has a fixed port and supports only synchronous (blocking) calls, but it is really easy to use and requires minimal information from your RPA environment:
 
