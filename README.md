@@ -20,19 +20,27 @@ The synchronous web API is exposed by every IBM RPA agent service that you insta
 **_NEW_** in IBM RPA version 21.0.2 is the IBM RPA Server API that we can use to trigger a IBM RPA Process **asynchronously** to run a bot assigned to it. _Using this API is now supported in toolkit version 2!_ The use of this Server API requires a bit more setting up:
 
 - Need to define an RPA process (bot orchestration) using your RPA tenant's control center
-- At least one queue for the process
+- Input parameters for the bot to trigger via RPA Processes (optional)
+- At least one queue created for the process
 - Computers (bot runtimes) defined to run the process
-- Computer credentials defined
+- Computer credentials defined (needed to run the process)
 - Computer definition changed to allow queue based processing
+- Valid user credentials (RPA user) to access the Server API
 
 ## The Toolkit
-The first version of the Toolkit supported only running IBM RPA bots synchronously using the Web API exposed by any RPA runtime environment (agent service). The second version now supports running bots via the IBM RPA Server API that can be used to trigger orchestrations (IBM RPA Processes). The offcial documentation of the Server API can be found [HERE](https://www.ibm.com/docs/en/rpa/21.0?topic=api-starting-bot-in-orchestrator-process-via).
+The first version of the Toolkit supported only running IBM RPA bots synchronously using the web API exposed by any RPA runtime environment (agent service). The second version now supports running bots via the IBM RPA Server API that can be used to trigger orchestrations (IBM RPA Processes). The offcial documentation of the Server API can be found [HERE](https://www.ibm.com/docs/en/rpa/21.0?topic=api-starting-bot-in-orchestrator-process-via).
 
-When using synchronous calls, there are obviously some things to consider:
+When using _synchronous_ calls, there are obviously some things to consider:
 
 - If the bot runs for a long time, we might have a timeout for the call
 - If there is no available RPA runtime for bot execution the call fails
 - Best suited to run simple bots (queries / updates) with dedicated number of runtimes
+
+When using _asynchronous_ calls, things to consider:
+
+- This type of invocation is more natural for RPA, since bots can run for several minutes and based on availability of bot runtimes, they might be even delayed until a free runtime is available
+- The mechanism is based on IBM RPA Process definition that allows you to define multiple bot runtimes for failover and load balancing
+- Needs more settings and is harder to use than the synchronous API
 
 Now, finally to the Toolkit itself 😄 Toolkit components are quite well documented already inside the Toolkit using the documentation fields, but let's walk through the components inside the toolkit.
 
