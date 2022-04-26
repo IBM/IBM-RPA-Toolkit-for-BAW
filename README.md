@@ -46,7 +46,7 @@ Now, finally to the Toolkit itself 😄 Toolkit components are quite well docume
 
 ### Toolkit components
 
-![](./images/tk_components.png)
+![](./images/tk_inventory.png)
 
 >**Business Objects**
 
