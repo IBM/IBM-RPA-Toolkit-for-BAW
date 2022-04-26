@@ -9,7 +9,7 @@ There are several ways to start an IBM RPA bot. Using scheduling, orchestrations
 
 ![](./images/start_bot_new.png)
 
-The Web API is exposed by every IBM RPA agent service that you install and connect to your IBM RPA tenant. The operation of the API is described [HERE](https://www.ibm.com/docs/en/rpa/21.0?topic=bot-starting-bots-by-api-call). Currently the Web API has a fixed port and supports only synchronous (blocking) calls, but it is really easy to use and requires minimal information from your RPA environment:
+The synchronous web API is exposed by every IBM RPA agent service that you install and connect to your IBM RPA tenant. The operation of the API is described [HERE](https://www.ibm.com/docs/en/rpa/21.0?topic=bot-starting-bots-by-api-call). Currently the API has a fixed port and supports only synchronous (blocking) calls, but it is really easy to use and requires minimal information from your RPA environment:
 
 - URL to your RPA Agent (https://<your_computer_address>:8099)
 - Name of the bot you want to trigger
@@ -17,7 +17,13 @@ The Web API is exposed by every IBM RPA agent service that you install and conne
 - Input parameters for the bot (optional)
 - Information if the RPA Agent computer needs to be unlocked to run the bot (true / false)
 
-**_NEW_** in IBM RPA version 21.0.2 is the IBM RPA Server API that we can use to trigger a IBM RPA Process to run a bot assigned to it. _Using this API is now supported in toolkit version 2!_
+**_NEW_** in IBM RPA version 21.0.2 is the IBM RPA Server API that we can use to trigger a IBM RPA Process **asynchronously** to run a bot assigned to it. _Using this API is now supported in toolkit version 2!_ The use of this Server API requires a bit more setting up:
+
+- Need to define an RPA process (bot orchestration) using your RPA tenant's control center
+- At least one queue for the process
+- Computers (bot runtimes) defined to run the process
+- Computer credentials defined
+- Computer definition changed to allow queue based processing
 
 ## The Toolkit
 The first version of the Toolkit supported only running IBM RPA bots synchronously using the Web API exposed by any RPA runtime environment (agent service). The second version now supports running bots via the IBM RPA Server API that can be used to trigger orchestrations (IBM RPA Processes). The offcial documentation of the Server API can be found [HERE](https://www.ibm.com/docs/en/rpa/21.0?topic=api-starting-bot-in-orchestrator-process-via).
