@@ -52,7 +52,7 @@ Now, finally to the Toolkit itself 😄 Toolkit components are quite well docume
 
 `InstanceIdObject` `InstanceStatusResponse` `LoginResponseObject` are all just helper BOs that are used to implement some of the TK logic. You do not need use them yourself when using the toolkit.
 
-`RPAInfo` is the BO that you need to use when calling out for your bot using the synchronous API. It has the following parameters:
+`RPAInfo` is the BO that you need to use when calling out your bot using the synchronous API. It has the following parameters:
 
 ![](./images/rpainfo.png)
 - _web_api_url_ (String): the URL pointing to your RPA Agent’s Web API.
@@ -62,25 +62,30 @@ Now, finally to the Toolkit itself 😄 Toolkit components are quite well docume
 - _bot_version_ (String): version number of the bot you want to run.
 - _bot_input_ (String): input parameters that you want to provide when calling the bot – needs to be in JSON String format (look Test Synchronous Integration CSHS for an example).
 
-`RPAInfo_Srever_Async` is the BO that you need to use when calling out for your bot. It has the following parameters:
+`RPAInfo_Srever_Async` is the BO that you need to use when calling out your bot using the new asynchronous RPA Server API. It has the following parameters:
 
 ![](./images/rpa_info_async.png)
-- _web_api_url_ (String): the URL pointing to your RPA Agent’s Web API.
-- _http_method_ (String): method you want to use, GET or POST are supported, but if you’re passing input parameters, you should always use POST.
-- _unlock_machine_ (String): accepts true or false and determines if your agent environment (Windows) needs to be unlocked in order to run the bot.
-- _bot_to_trigger_ (String): name of the bot – as it is in your RPA tenant repository – you want to run.
-- _bot_version_ (String): version number of the bot you want to run.
-- _bot_input_ (String): input parameters that you want to provide when calling the bot – needs to be in JSON String format (look Test Synchronous Integration CSHS for an example).
+- _server_api_url_ (String): the URL pointing to your RPA Server's API.
+- _process_id_ (String): the ID of the RPA process you want to trigger.
+- _tenant_id_ (String): the ID of the RPA tenant that has the process that you want to trigger.
+- _bot_input_ (String): input parameter(s) that you want to provide when calling the RPA process – needs to be in JSON String format and wrapped to **payload** object. Look the documentation / example inside the toolkit.
+- _username_ (String): name of the RPA user you want to use to trigger the process with.
+- _password_ (String): password of the RPA user used to trigger the process.
+
 
 `TestResponse` is used for testing in the Test Synchronous Integration CSHS to handle the response back from the bot.
 
 >**Processes**
 
-`IBM RPA Activity NOT-TESTED` is the process to be used when calling out bots in asynchronous manner. As it was already discussed, the current Toolkit and the IBM RPA does not support this yet, but the Toolkit implementation is already in place.
+`IBM RPA Async Call` is the process to be used when calling out bots in asynchronous manner using the new RPA Server API.
 
 >**Client-Side Human Services (CSHS)**
 
-`RPA Task` is used by the IBM RPA Activity NOT-TESTED, so it is not in use in this version yet.
+`Test Get Processes` is a helper service for getting the **process ID** for the process you want to trigger using the RPA Server API. Process IDs are immutable, so you only need to get the ID once and then you can use it in **RPAInfo_Server_Asynch** BO when triggering the bot.
+
+`Test Get Tenants` is a helper service for getting the **tenant ID** that has the process you want to trigger using the RPA Server API. Tenant IDs are immutable, so you only need to get the ID once and then you can use it in **RPAInfo_Server_Asynch** BO when triggering the bot.
+
+`Test Login to tenant` is a helper service for getting the **access token** for the tenant that has the process you want to trigger using the RPA Server API. You do not need to use this service since the code to get the access token is embedded to the toolkit functionality (**IBM RPA Async Call** process).
 
 `Test Synchronous Integration` is a ready-made service for testing the synchronous call using the Run IBM RPA Bot service flow.
 
