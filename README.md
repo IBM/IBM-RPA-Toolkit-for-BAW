@@ -142,9 +142,15 @@ The picture below shows the default values for the RPAInfo business object in th
 
 ![](./images/attributes.png)
 
-### One more thing
+## Testing the toolkit - asynchronous RPA Server API
 
-When testing the Toolkit, BAW is calling IBM RPA via `https`. This obviously means that you need to import the signer certificate from _**https:<your_rpa_agent_address>:8099**_ to your BAW keystore. If you do not know how to do that, these instructions might help: https://www.ibm.com/docs/en/was-nd/8.5.5?topic=communications-adding-signer-certificate-keystore
+Testing the asynchronous invocation is a bit trickier than using the synchronous one. As mentiond, when we use the asynchronous IBM RPA Server API, we're not directly triggering a bot but an RPA process (aka orchestration) that needs to be first configured to your RPA server tenant you're using. For this you need to consult the official IBM RPA documentation: https://www.ibm.com/docs/en/rpa/21.0?topic=api-configuring-process
+
+_**We're also planning to publish a lab exercise how to configure your IBM RPA environment and to test the toolkit.**_ Stay tuned! The lab will be published in [IBM RPA Community](https://ibm.biz/rpa-community).
+
+## One more thing
+
+When testing the Toolkit, BAW is calling IBM RPA via `https`. This obviously means that you need to import the signer certificate from _**https:<your_rpa_agent_address>:8099**_ (for synchronous invocation) and form _**https:<your_rpa_sever_api_address>**_ (for asynchronous invocation) to your BAW keystore. If you do not know how to do that, these instructions might help: https://www.ibm.com/docs/en/was-nd/8.5.5?topic=communications-adding-signer-certificate-keystore
 
 ## Downloads
 
