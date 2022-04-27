@@ -150,7 +150,7 @@ _**We're also planning to publish a lab exercise how to configure your IBM RPA e
 
 ## One more thing
 
-When testing the Toolkit, BAW is calling IBM RPA via `https`. This obviously means that you need to import the signer certificate from _**https:<your_rpa_agent_address>:8099**_ (for synchronous invocation) and form _**https:<your_rpa_sever_api_address>**_ (for asynchronous invocation) to your BAW keystore. If you do not know how to do that, these instructions might help: https://www.ibm.com/docs/en/was-nd/8.5.5?topic=communications-adding-signer-certificate-keystore
+When testing the Toolkit, BAW is calling IBM RPA via `https`. This obviously means that you need to import the signer certificate from _**https://<your_rpa_agent_address>:8099**_ (for synchronous invocation) and form _**https://<your_rpa_sever_api_address>**_ (for asynchronous invocation) to your BAW keystore. If you do not know how to do that, these instructions might help: https://www.ibm.com/docs/en/was-nd/8.5.5?topic=communications-adding-signer-certificate-keystore
 
 ## Downloads
 
