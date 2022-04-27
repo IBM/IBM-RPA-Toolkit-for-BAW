@@ -103,9 +103,19 @@ Default implementation, not changed.
 
 >**Service Flows**
 
+`Get Instance Status` is a service flow used by the **IBM RPA Async Call** process that you should use for triggering an RPA Process via the Server API. You do not need to use it directly since it's integrated the process IBM RPA Async Call. It provides the functionality to call out your RPA Server and get the RPA process instance status that you have earlier created/started.
+
+`Get Processes` is a helper service flow that is used by **Test Get Processes** CSHS. It retrieves all the one-step IBM RPA Processes - and their information - from your RPA Server tenant.
+
+`Get Tenants` is a helper service flow that is used by **Test Get Tenants** CSHS. It retrieves all the tenants - and their information - the user has access to.
+
+`Login to tenant` is a service flow used by the **IBM RPA Async Call** process that you should use for triggering an RPA Process via the Server API. You do not need to use it directly since it's integrated the process IBM RPA Async Call. It provides the functionality to login to your RPA Server tenant and get the access token for consecutive API calls. The service flow is also used by **Test Login to tenant** CSHS for testing the login procedure.
+
 `Run IBM RPA Bot` is the service flow that you need to use in order to run IBM RPA bot using the synchronous RPA Web API. Look _Test Synchronous Integration_ CSHS for an example.
 
-## Testing the toolkit
+`Run IBM RPA Process via Server API` is the service flow used by the **IBM RPA Async Call** process that you should use for triggering an RPA Process via the Server API. You do not need to use it directly since it's integrated the process IBM RPA Async Call. It provides the functionality to trigger IBM RPA Process using the IBM RPA Server API.
+
+## Testing the toolkit - synchronous API
 
 Let’s a have a closer look of the Test Synchronous Integration CSHS to see an example how to use the toolkit.
 
