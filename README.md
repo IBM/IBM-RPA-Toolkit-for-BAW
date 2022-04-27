@@ -156,7 +156,7 @@ When testing the Toolkit, BAW is calling IBM RPA via `https`. This obviously mea
 
 Finally, here the link to the toolkit, hope you find it useful!
 
-[IBM RPA Toolkit for BAW](https://github.com/juseljuk/IBM-RPA-Toolkit-for-BAW/blob/master/downloads/IBM_RPA.twx)
+[IBM RPA Toolkit for BAW V2](https://github.com/juseljuk/IBM-RPA-Toolkit-for-BAW/blob/master/downloads/IBM_RPA.twx)
 
 Also, here's the link to the bot WAL scipt file, that works together with the `Test Synchronous Integration` CSHS testing service. Just make sure to publish the bot to your RPA tenant using the name _**HelloWorld**_ and `Set as production` flag enabled.
 
