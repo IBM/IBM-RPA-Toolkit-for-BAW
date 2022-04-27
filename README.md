@@ -79,6 +79,8 @@ Now, finally to the Toolkit itself 😄 Toolkit components are quite well docume
 
 `IBM RPA Async Call` is the process to be used when calling out bots in asynchronous manner using the new RPA Server API.
 
+![](./images/process_server_api.png)
+
 >**Client-Side Human Services (CSHS)**
 
 `Test Get Processes` is a helper service for getting the **process ID** for the process you want to trigger using the RPA Server API. Process IDs are immutable, so you only need to get the ID once and then you can use it in **RPAInfo_Server_Asynch** BO when triggering the bot.
