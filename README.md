@@ -77,9 +77,9 @@ Now, finally to the Toolkit itself 😄 Toolkit components are quite well docume
 
 >**Processes**
 
-`IBM RPA Async Call` is the process to be used when calling out bots in asynchronous manner using the new RPA Server API.
+`IBM RPA Async Call` is the process to be used when calling out bots in asynchronous manner using the new RPA Server API. When it is invoked, you need to provide **RPAInfo_Server_Asynch** BO as input paramaters as well as _timeout_mins_ (Integer) and _integrations_ (Integer) to determine how long (minutes) and how many times you want to wait for the RPA Process to complete the processing
 
-![](./images/process_server_api.png)
+![](./images/process_server_new.png)
 
 >**Client-Side Human Services (CSHS)**
 
