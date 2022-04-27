@@ -87,6 +87,8 @@ The process first triggers the specified RPA process creating a new RPA process 
 - 3 = Error Getting the RPA Process Status
 - 4 = RPA Process did not finish during the defined wait cycle
 
+Besides the status code, the process returns the RPA process (bot) output in form of JSON String. Since the format of the output depends on the signature of the RPA Process (bot) we're running, the user is responsible to handle the output. User can build a business object that has the same structure as the the returned JSON and map the returned JSON String to it using **JSON.parse()**.
+
 >**Client-Side Human Services (CSHS)**
 
 `Test Get Processes` is a helper service for getting the **process ID** for the process you want to trigger using the RPA Server API. Process IDs are immutable, so you only need to get the ID once and then you can use it in **RPAInfo_Server_Asynch** BO when triggering the bot.
