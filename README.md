@@ -77,11 +77,15 @@ Now, finally to the Toolkit itself 😄 Toolkit components are quite well docume
 
 >**Processes**
 
-`IBM RPA Async Call` is the process to be used when calling out bots in asynchronous manner using the new RPA Server API. When it is invoked, you need to provide **RPAInfo_Server_Asynch** BO as input paramaters as well as _timeout_mins_ (Integer), _integrations_ (Integer) to determine how long (minutes) and how many times you want to wait for the RPA Process to complete the processing and _fire_and_forget_ (Boolean) to determine if you even want to wait for the RPA Process to finish.
+`IBM RPA Async Call` is the process to be used when calling out bots in asynchronous manner using the new RPA Server API. When it is invoked, you need to provide **RPAInfo_Server_Asynch** BO as input paramaters as well as _timeout_mins_ (Integer), _iterations_ (Integer) to determine how long (minutes) and how many times you want to wait for the RPA Process to complete the processing and _fire_and_forget_ (Boolean) to determine if you even want to wait for the RPA Process to finish.
 
 ![](./images/process_server_api_new.png)
 
-The process first triggers to process creating a new IBM RPA process instance. If _fire_and_forget_ is **false** (the default), the process waits for a certain number of minutes (based on the _timeout_mins_ input variable) and then proceeds to check the status of the
+The process first triggers the specified RPA process creating a new RPA process instance. If _fire_and_forget_ is **false** (the default), the process waits for a certain number of minutes (based on the _timeout_mins_ input variable) and then proceeds to check the status of the RPA process instance. If the process is finished, it sets the status code for OK (1), but if not, it goes back to wait and repeats the cycle as many times dictated by the input parameter _iterations_ if the RPA process has not finished. Returned status codes are:
+- 1 = All Good
+- 2 = Error Triggering the RPA Process
+- 3 = Error Getting the RPA Process Status
+- 4 = RPA Process did not finish during the defined wait cycle
 
 >**Client-Side Human Services (CSHS)**
 
