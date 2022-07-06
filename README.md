@@ -146,7 +146,8 @@ The picture below shows the default values for the RPAInfo business object in th
 
 Testing the asynchronous invocation is a bit trickier than using the synchronous one. As mentiond, when we use the asynchronous IBM RPA Server API, we're not directly triggering a bot but an RPA process (aka orchestration) that needs to be first configured to your RPA server tenant you're using. For this you need to consult the official IBM RPA documentation: https://www.ibm.com/docs/en/rpa/21.0?topic=api-configuring-process
 
-_**NEW! LAB Guide is here!**_ You can find it from the downloads [HERE](./downloads/Using%20IBM%20RPA%20with%20IBM%20BAW.pdf).
+###_**NEW! LAB Guide is here!**_
+You can find it from the downloads [HERE](./downloads/Using%20IBM%20RPA%20with%20IBM%20BAW.pdf).
 
 ## One more thing
 
