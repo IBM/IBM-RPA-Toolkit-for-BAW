@@ -1,7 +1,7 @@
 # IBM RPA Toolkit for BAW
 
 ## Update 2023-03-20
-Relased toolkit version 2.2 for IBM RPA V23 with a changed Login API signature. Use toolkit version 2.2 with IBM RPA V23+.
+Released toolkit version 2.2 for IBM RPA V23 with a changed Login API signature. Use toolkit version 2.2 with IBM RPA V23+.
 
 ## Introduction
 As IBM offering management is working on enhancements in out-of-the-box integrations between BAW and IBM RPA, IBM technical sales organization provides this community asset to accelerate and enable usage of IBM RPA together with BAW.
